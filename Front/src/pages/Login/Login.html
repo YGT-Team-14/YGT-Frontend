@@ -10,14 +10,34 @@
 		</head>
 	</head>
 	<body>
-		<!-- <div id="LoginWrapper">
-			<form id="LoginContainer">
-				<input type="text" name="id" placeholder="아이디" />
-				<input type="password" name="pw" placeholder="비밀번호" />
-				<input type="submit" value="제출" />
-			</form>
-		</div> -->
-
+		<div id="LoginWrapper">
+			<div id="LoginPicture"></div>
+			<section id="LoginContainer">
+				<section class="LoginTop">
+					<img src="../../static/logoIcon.svg" />
+					<div class="TopText">만나서 반가워요 !</div>
+				</section>
+				<form class="LoginInputs">
+					<p>로그인</p>
+					<input type="text" name="id" placeholder="아이디" />
+					<p>비밀번호</p>
+					<input type="password" name="pw" placeholder="비밀번호" />
+					<button class="GoMainBtn">시작하기</button>
+				</form>
+				<section class="LoginBottom">
+					<hr />
+					<div class="BottomText">
+						<p>아직 계정이 없으신가요?</p>
+						<button
+							class="GoSignupBtn"
+							onClick="location.href='http://127.0.0.1:5500/Front/src/pages/Signup/Signup.html'"
+						>
+							회원가입 하기
+						</button>
+					</div>
+				</section>
+			</section>
+		</div>
 		<script src="./Login.js"></script>
 	</body>
 </html>
