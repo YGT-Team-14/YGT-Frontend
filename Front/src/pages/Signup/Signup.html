@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="../../../node_modules/axios/dist/axios.min.js"></script>
 		<link rel="stylesheet" href="Signup.css" />
 		<title>Signup</title>
 	</head>
@@ -11,13 +12,13 @@
 		<div id="SignupWrapper">
 			<p class="SignupTitle">짝선짝후 회원가입</p>
 			<form class="SignupInputs">
-				<input type="text" name="id" placeholder="이메일 주소" />
-				<input type="text" name="pw" placeholder="비밀번호" />
-				<input type="text" name="univ" placeholder="학교 이름" />
+				<input type="text" id="email" placeholder="이메일 주소" />
+				<input type="text" id="pw" placeholder="비밀번호" />
+				<input type="text" id="univ" placeholder="학교 이름" />
 			</form>
 			<form class="InputDetails">
-				<input type="text" name="dep" placeholder="학과" />
-				<input type="text" name="class" placeholder="학번" />
+				<input type="text" id="dep" placeholder="학과" />
+				<input type="text" id="class" placeholder="학번" />
 			</form>
 			<button class="SignupBtn">가입 하기</button>
 			<section class="LoginBottom">
@@ -33,75 +34,23 @@
 				</div>
 			</section>
 		</div>
-		<style>
-			* {
-				font-family: 'Noto Sans KR';
-				outline: none;
-			}
-			#SignupWrapper {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-items: center;
-			}
-			.SignupTitle {
-				color: #569eb8;
-				font-weight: 700;
-				font-size: 30px;
-				margin-top: 70px;
-			}
-			input {
-				font-weight: 400;
-				font-size: 16px;
-			}
-			.SignupInputs {
-				display: flex;
-				flex-direction: column;
-				margin-top: 10px;
-			}
-			.SignupInputs input {
-				width: 355px;
-				height: 57px;
-				margin-bottom: 20px;
-				padding-left: 20px;
-				border: 2px solid #d9d9d9;
-			}
-			.InputDetails input {
-				width: 172px;
-				height: 57px;
-				margin-bottom: 20px;
-				padding-left: 10px;
-				border: 2px solid #d9d9d9;
-			}
-			.SignupBtn {
-				width: 380px;
-				height: 56px;
-				border: none;
-				background-color: #569eb8;
-				color: #ffffff;
-				font-weight: 400;
-				font-size: 16px;
-				margin-top: 10px;
-			}
-			hr {
-				width: 370px;
-				height: 0px;
-				border: 1px solid #f4f5f4;
-				background-color: #f4f5f4;
-				margin-top: 40px;
-			}
-			.BottomText {
-				display: flex;
-				justify-content: space-between;
-				margin-top: 5px;
-			}
-			.GoLoginBtn {
-				color: #569eb8;
-				border: none;
-				background-color: transparent;
-				font-weight: 400;
-				font-size: 16px;
-			}
-		</style>
+		<script type="text/javascript">
+			document.querySelector('.SignupBtn').addEventListener('click', () => {
+				event.preventDefault();
+				var inputEmail = document.querySelector('#email').value;
+				var inputPW = document.querySelector('#pw').value;
+				var inputUniv = document.querySelector('#univ').value;
+				var inputDep = document.querySelector('#dep').value;
+				var inputClass = document.querySelector('#class').value;
+
+				axios.post('https://dy6578.pythonanywhere.com/api/posts/'{
+					email: inputEmail,
+					pw: inputPW,
+					univ: inputUniv,
+					dep: inputDep,
+					class: inputClass,
+				});
+			});
+		</script>
 	</body>
 </html>
