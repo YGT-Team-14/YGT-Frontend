@@ -43,13 +43,16 @@
 				var inputDep = document.querySelector('#dep').value;
 				var inputClass = document.querySelector('#class').value;
 
-				axios.post('https://dy6578.pythonanywhere.com/api/posts/'{
-					email: inputEmail,
-					pw: inputPW,
-					univ: inputUniv,
-					dep: inputDep,
-					class: inputClass,
-				});
+				axios
+					.post('http://localhost:8888/users/', {
+						email: inputEmail,
+						pw: inputPW,
+						univ: inputUniv,
+						dep: inputDep,
+						class: inputClass,
+					})
+					.then(alert('회원가입을 축하합니다.'));
+				//모달창 띄우기 수정하기
 			});
 		</script>
 	</body>
