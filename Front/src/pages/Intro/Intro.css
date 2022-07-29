@@ -64,6 +64,9 @@
 .TopText2 {
 	width: 445px;
 	line-height: 30px;
+	font-weight: 500;
+	font-size: 16px;
+	letter-spacing: 1px;
 }
 #IntroCenter {
 	width: 100%;
@@ -77,19 +80,41 @@
 	font-size: 32px;
 	color: #373f41;
 	margin-top: 100px;
+	letter-spacing: 0.1px;
 }
 .CenterBoxWrapper {
-	width: 100%;
+	width: 900px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	justify-items: center;
 	margin: 80px 0 0 0;
 }
 .CenterBox {
 	width: 350px;
-	height: 180px;
-	border: solid;
+	height: 139px;
 	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.BoxTitle1,
+.BoxTitle2,
+.BoxTitle3,
+.BoxTitle4 {
+	font-weight: 700;
+	font-size: 18px;
+	margin-top: 26px;
+}
+
+.CenterBox img {
+	width: 45px;
+}
+.CenterBox p {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #373f41;
+	text-align: center;
 }
 #IntroBottom {
 	height: 800px;
@@ -110,7 +135,7 @@
 	font-size: 26px;
 	line-height: 40px;
 	color: #373f41;
-	letter-spacing: 0.2 px;
+	letter-spacing: 0.5 px;
 }
 #IntroFooter {
 	display: flex;

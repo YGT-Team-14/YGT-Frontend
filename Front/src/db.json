@@ -6,7 +6,8 @@
       "pw": "0606",
       "univ": "이화여자대학교",
       "dep": "사이버보안학과",
-      "class": "19"
+      "class": "19",
+      "temperature": "36.5"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "pw": "0529",
       "univ": "이화여자대학교",
       "dep": "컴퓨터공학과",
-      "class": "21"
+      "class": "21",
+      "temperature": "36.5"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "pw": "0906",
       "univ": "이화여자대학교",
       "dep": "뇌인지과학과",
-      "class": "21"
+      "class": "21",
+      "temperature": "36.5"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "pw": "0209",
       "univ": "이화여자대학교",
       "dep": "미디어학과",
-      "class": "21"
+      "class": "21",
+      "temperature": "36.5"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "pw": "1208",
       "univ": "이화여자대학교",
       "dep": "사이버보안학과",
-      "class": "19"
+      "class": "19",
+      "temperature": "36.5"
     },
     {
       "email": "jungwon@naver.com",
@@ -46,7 +51,8 @@
       "univ": "이화여자대학교",
       "dep": "경제학과",
       "class": "22",
-      "id": 6
+      "id": 6,
+      "temperature": "36.5"
     },
     {
       "email": "taeyeon@naver.com",
@@ -54,15 +60,26 @@
       "univ": "이화여자대학교",
       "dep": "심리학과",
       "class": "17",
-      "id": 7
+      "id": 7,
+      "temperature": "36.5"
     },
     {
-      "email": "juwon@gmail.com",
-      "pw": "0809",
+      "email": "jiwo@naver.com",
+      "pw": "0726",
       "univ": "이화여자대학교",
-      "dep": "심리학과",
-      "class": "22",
+      "dep": "수학교육과",
+      "class": "20",
+      "temperature": 36.5,
       "id": 8
+    },
+    {
+      "email": "jungsun@gmail.com",
+      "pw": "0804",
+      "univ": "이화여자대학교",
+      "dep": "경제학과",
+      "class": " 20",
+      "temperature": 36.5,
+      "id": 9
     }
   ]
 }

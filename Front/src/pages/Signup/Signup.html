@@ -37,6 +37,7 @@
 		<script type="text/javascript">
 			document.querySelector('.SignupBtn').addEventListener('click', () => {
 				event.preventDefault();
+
 				var inputEmail = document.querySelector('#email').value;
 				var inputPW = document.querySelector('#pw').value;
 				var inputUniv = document.querySelector('#univ').value;
@@ -50,9 +51,15 @@
 						univ: inputUniv,
 						dep: inputDep,
 						class: inputClass,
+						temperature: 36.5,
 					})
-					.then(alert('회원가입을 축하합니다.'));
-				//모달창 띄우기 수정하기
+					.then(res => {
+						if (!(inputPW == '')) {
+							location.href =
+								'http://127.0.0.1:5500/Front/src/pages/Login/Login.html';
+							alert('회원가입을 축하합니다.');
+						}
+					});
 			});
 		</script>
 	</body>

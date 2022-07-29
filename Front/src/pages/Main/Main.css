@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#MainHeader {
+	width: 100%;
+	height: 88px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.HeaderLeft {
+	margin-left: 103px;
+	display: flex;
+}
+.logoText {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	color: #569eb8;
+	margin-left: 20px;
+}
+.HeaderRight {
+	display: flex;
+	font-weight: 700;
+	font-size: 22px;
+	margin-right: 114px;
+}
+.HeaderRight p {
+	margin: 7px 27px 0 0;
+}
+#MainCenter {
+	height: 672px;
+	background-color: #fffdf7;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.CenterTitle {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #373f41;
+}
+.CenterText {
+	margin-top: 30px;
+	text-align: center;
+	font-weight: 400;
+	font-size: 16px;
+	color: #737b7d;
+}
