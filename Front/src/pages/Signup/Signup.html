@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="../../../node_modules/axios/dist/axios.min.js"></script>
+		<link rel="stylesheet" href="Signup.css" />
+		<title>Signup</title>
+	</head>
+	<body>
+		<div id="SignupWrapper">
+			<p class="SignupTitle">짝선짝후 회원가입</p>
+			<form class="SignupInputs">
+				<input type="text" id="email" placeholder="이메일 주소" />
+				<input type="text" id="pw" placeholder="비밀번호" />
+				<input type="text" id="univ" placeholder="학교 이름" />
+			</form>
+			<form class="InputDetails">
+				<input type="text" id="dep" placeholder="학과" />
+				<input type="text" id="class" placeholder="학번" />
+			</form>
+			<button class="SignupBtn">가입 하기</button>
+			<section class="LoginBottom">
+				<hr />
+				<div class="BottomText">
+					<p>계정이 있으신가요?</p>
+					<button
+						class="GoLoginBtn"
+						onClick="location.href='http://127.0.0.1:5500/Front/src/pages/Login/Login.html'"
+					>
+						로그인 하기
+					</button>
+				</div>
+			</section>
+		</div>
+		<script type="text/javascript">
+			document.querySelector('.SignupBtn').addEventListener('click', () => {
+				event.preventDefault();
+
+				var inputEmail = document.querySelector('#email').value;
+				var inputPW = document.querySelector('#pw').value;
+				var inputUniv = document.querySelector('#univ').value;
+				var inputDep = document.querySelector('#dep').value;
+				var inputClass = document.querySelector('#class').value;
+
+				axios
+					.post('http://localhost:8888/users/', {
+						email: inputEmail,
+						pw: inputPW,
+						univ: inputUniv,
+						dep: inputDep,
+						class: inputClass,
+						temperature: 36.5,
+					})
+					.then(res => {
+						if (!(inputPW == '')) {
+							location.href =
+								'http://127.0.0.1:5500/Front/src/pages/Login/Login.html';
+							alert('회원가입을 축하합니다.');
+						}
+					});
+			});
+		</script>
+	</body>
+</html>

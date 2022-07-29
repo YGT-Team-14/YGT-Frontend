@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<head>
+			<meta charset="UTF-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="stylesheet" href="Login.css" />
+			<script src="../../../node_modules/axios/dist/axios.min.js"></script>
+			<title>Login</title>
+		</head>
+	</head>
+	<body>
+		<div id="LoginWrapper">
+			<img id="LoginPicture" src="../../static/LoginImage.svg" />
+			<section id="LoginContainer">
+				<section class="LoginTop">
+					<img src="../../static/logoIcon.svg" />
+					<div class="TopText">만나서 반가워요 !</div>
+				</section>
+				<form class="LoginInputs">
+					<p>로그인</p>
+					<input type="text" name="email" placeholder="이메일" id="ID" />
+					<p>비밀번호</p>
+					<input
+						type="password"
+						name="pw"
+						placeholder="비밀번호"
+						autocomplete="on"
+						id="PW"
+					/>
+					<button class="GoMainBtn">시작하기</button>
+				</form>
+				<section class="LoginBottom">
+					<hr />
+					<div class="BottomText">
+						<p>아직 계정이 없으신가요?</p>
+						<button
+							class="GoSignupBtn"
+							onClick="location.href='http://127.0.0.1:5500/Front/src/pages/Signup/Signup.html'"
+						>
+							회원가입 하기
+						</button>
+					</div>
+				</section>
+			</section>
+		</div>
+		<script type="text/javascript">
+			document.querySelector('.GoMainBtn').addEventListener('click', () => {
+				event.preventDefault();
+				var inputID = document.querySelector('#ID').value;
+				var inputPW = document.querySelector('#PW').value;
+				console.log(inputID);
+				console.log(inputPW);
+				axios.get(`http://localhost:8888/users`).then(res => {
+					let users = res.data;
+					let success = 0;
+					for (let i = 0; i < users.length; i++) {
+						if (users[i].email == inputID && users[i].pw == inputPW) {
+							alert('성공');
+							location.href =
+								'http://127.0.0.1:5500/Front/src/pages/Signup/Signup.html';
+							//main으로 넘어가게 수정하기
+							success = 1;
+							break;
+						}
+					}
+					if (!success) alert('실패');
+
+					document.querySelector('#ID').value = '';
+					document.querySelector('#PW').value = '';
+				});
+			});
+		</script>
+	</body>
+</html>
